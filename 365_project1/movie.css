@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+.navigation {
+  background-color: #ffd633;
+  margin: 0;
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 15px;
+  z-index: 2;
+  background: linear-gradient(135deg, #ffd633, #b3fff0, #b3f770);
+  background-size: 400%;
+  animation: anim 5s infinite alternate;
+}
+
+@keyframes anim {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
+  }
+}
+
+.navigation .logo {
+  width: 80px;
+  height: 50px;
+  float: left;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navigation .link {
+  font-size: 17px;
+  text-align: center;
+  margin: 8px 20px 0px 25px;
+  float: left;
+  padding: 3px 5px;
+}
+
+.link.text {
+  text-decoration: none;
+  padding-top: 25px;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.navigation .link:hover {
+  color: gray;
+}
+
+.slideshow-container {
+  max-width: 1400px;
+  position: relative;
+  margin: 0;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: white;
+}
+
+.dropbox {
+  margin-left: 30px;
+}
+
+.dropbtn {
+  background-color: gold;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 150px;
+  height: 35px;
+  margin: 10px 20px 60px 0px;
+}
+
+.dropdown {
+  position: realtive;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: whitesmoke;
+  max-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px 45px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 10px;
+  text-decoration: none;
+  display: block;
+  margin-top: 2px;
+  font-size: 0.7rem;
+}
+
+.dropdown-content a:hover {
+  background-color: gold;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.search-box {
+  padding-left: 400px;
+}
+
+.input-medium.search-query {
+  margin-top: -103px;
+  background-color: gold;
+  height: 40px;
+  width: 1006px;
+  margin-right: 55px;
+  border: double rgb(24, 23, 21);
+  border-radius: 4px;
+  position: absolute;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.search-button {
+  border: 0;
+  border-radius: 0;
+  outline: none !important;
+  margin-left: 965px;
+  cursor: pointer;
+}
+
+.search-button button {
+  padding: 4px 10px;
+  margin-right: 25px;
+  background: gold;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  margin-left: 0px;
+  margin-top: -98px;
+  margin-bottom: 0px;
+  position: absolute;
+  font-weight: bolder;
+}
+
+.search-button button:hover {
+  background-color: whitesmoke;
+}
+
+.fa {
+  float: right;
+}
+
+.fa {
+  display: inline-block;
+  font-size: inherit;
+  text-rendering: auto;
+}
+
+#media-container {
+  margin: 10px 20px 20px 20px;
+}
+
+#media-holder {
+  clear: both;
+}
+
+.movies {
+  position: relative;
+  width: 200px;
+  margin: 10px 10px;
+  float: left;
+}
+
+.about {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  text-align: center;
+  top: 70%;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.9rem;
+}
+
+.text {
+  color: black;
+  padding: 30px 30px 20px 0px;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 600px) {
+  div .movies {
+    width: 50%;
+  }
+}

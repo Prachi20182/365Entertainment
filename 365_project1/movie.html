@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="movie.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!---navigationbar--->
+    <div class="container">
+        <hearder>
+            <div class="navigation">
+                <a class="link" href="index.html"><img class="logo" src="img/logo.jpg" alt="logo"></a>
+                <a class="link text" href="movie.html">Movies</a>
+                <a class="link text" href="#">TVSeries</a>
+                <a class="link text" href="#">Audio</a>
+            </div>
+        </hearder>
+    </div>
+
+    <!---slideshow images--->
+    
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="img/abc1(1).jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/abc2 (1).jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/abc3 (1).jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/abc4(1).jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/abc5(1).jpg" style="width: 100%" />
+        </div>
+      <!--Next and Previous bottons-->
+      <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+      <a class="next" onclick="plusSlides(1)">&#10095</a>
+    </div>
+    <br>
+
+    <!--Genre choice-->
+    <div class="dropbox">
+        <button class="dropbtn" onclick="myFunction()">
+            <span id="genreChoice">Genre</span>
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+            <a onclick="getMedia(this.text)">All</a>
+            <a onclick="getMedia(this.text)">Action</a>
+            <a onclick="getMedia(this.text)">Drama</a>
+            <a onclick="getMedia(this.text)">Sci-Fi</a>
+        </div>
+    </div>
+
+    <div class="search-box">
+        <form onsubmit="javascript:return false;">
+           <input type="text" class="input-medium search-query" placeholder="Search your favourite movie title" name="search" oninput="results()">
+           <div class="search-button">
+               <button type="submit" onclick="updateResult()">
+               <i class=" fa fa-search"></i></button>
+           </div>
+        </form>
+    </div>
+    </div>
+
+    <!--Movie Gallery-->
+    <div id="media-container">
+        <div id="media-holder">
+            <div id="images-container">
+                <div class="movies-action" style="display: block;">
+                    <div class="movies">
+                        <img src="img/nano1.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Haider</b>
+                            <br>
+                            Indian crime tragedy film.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano2.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Dream 2</b>
+                            <br>
+                            Thriller, Mystery & Comedy.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano3.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Batman</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano4.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Monster Manav</b>
+                            <br>
+                            Japanese manga series written by Tsugumi.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano5.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Kill Bill</b>
+                            <br>
+                            2003 American martial arts film.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano6.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Rowdy</b>
+                            <br>
+                            Indian action drama film.
+                        </div>
+                    </div>
+                </div>
+                <div class="movies-drama" style="display: block;">
+                    <div class="movies">
+                        <img src="img/nano7.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Agnipath</b>
+                            <br>
+                            Indian crime tragedy film.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano8.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Ankhein</b>
+                            <br>
+                            Thriller, Mystery & Comedy.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano9.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Guide</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano10.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Deewar</b>
+                            <br>
+                            2016.Fantasy/Science Fiction.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano11.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Sholay</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano12.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">K3G</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano13.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Shaurya</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano14.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Cheeni Kam</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano15.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Ishq Vishq</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano16.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Padmaavat</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano17.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Kai Po Che</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano18.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Raabta</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                </div>
+                <div class="movies-sci-fi" style="display: block;">
+                    <div class="movies">
+                        <img src="img/nano19.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Interstellar</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano20.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Star Wars</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano21.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Thor</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano22.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Captain America</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano23.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">X-Men</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano24.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Black Widow</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano25.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Iron-Man</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano26.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Hulk</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano27.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Captain Marvel</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano28.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Wonder Woman</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano29.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Batwoman</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano30.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Batsman</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano31.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Superman</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano32.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Superwoman</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano33.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Doctor Strange</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano34.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Mars</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano35.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Gravity</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="img/nano36.jpg" height="200" width="200">
+                        <div class="about">
+                            <b class="movie-title">Martian</b>
+                            <br>
+                            A Marvel Comics superhero team.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="no-results" style="display: block;">No Result Found</div>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <div class="navigation">
+            <a class="link" href="index.html"><img class="logo" src="img/logo.jpg" alt="logo"></a>
+            <div class="text">
+                Powered by 365 Entertainment Portal 2019. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    </body>
+    <script src="index.js"></script>
+</html>
